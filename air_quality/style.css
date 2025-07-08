@@ -1,4 +1,4 @@
-/* === 1. Basic Reset and Layout === */
+
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ body.dark-theme {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* === 2. Inputs & Buttons === */
+
 .loc-input {
     border: 3px solid #269fe6;
     font-size: 1rem;
@@ -69,7 +69,7 @@ body.dark-theme {
     background-color: #1e80c0;
 }
 
-/* === 3. Air Quality Info === */
+
 .air-quality,
 .arr,
 .air-quality-status {
@@ -85,7 +85,7 @@ body.dark-theme {
     transition: all 0.3s ease;
 }
 
-/* === 4. Component Info === */
+
 .component-names {
     display: inline-block;
 }
@@ -98,7 +98,7 @@ body.dark-theme {
     font-size: 1.2rem;
 }
 
-/* === 5. Search History Buttons === */
+
 .search-history {
     margin-top: 20px;
 }
@@ -117,7 +117,7 @@ body.dark-theme {
     background-color: #388e3c;
 }
 
-/* === 6. Loader Spinner === */
+
 .loader {
     border: 5px solid #f3f3f3;
     border-top: 5px solid #3498db;
@@ -134,7 +134,7 @@ body.dark-theme {
     100% { transform: rotate(360deg); }
 }
 
-/* === 7. Toast Notification === */
+
 .toast {
     visibility: hidden;
     min-width: 250px;
@@ -157,7 +157,7 @@ body.dark-theme {
     opacity: 1;
 }
 
-/* === 8. Dark Mode Toggle === */
+
 .theme-switch {
     position: fixed;
     top: 20px;
@@ -175,7 +175,7 @@ body.dark-theme {
     margin-right: 5px;
 }
 
-/* === 9. Map === */
+
 #map {
     height: 300px;
     margin-bottom: 20px;
@@ -183,7 +183,7 @@ body.dark-theme {
     border-radius: 10px;
 }
 
-/* === 10. Mask Advisory === */
+
 .mask-advisory {
     margin-top: 30px;
     padding: 20px;
@@ -195,7 +195,7 @@ body.dark-theme {
     line-height: 1.6;
 }
 
-/* === 11. Responsive Design === */
+
 @media (max-width: 768px) {
     .loc-input, .search-btn, .city-search-btn {
         width: 100%;
