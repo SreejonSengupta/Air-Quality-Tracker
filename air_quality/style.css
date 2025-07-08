@@ -1,0 +1,212 @@
+/* === 1. Basic Reset and Layout === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+.root {
+    padding: 2vw;
+    width: 100%;
+    min-height: 150vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(rgba(75, 71, 71, 0.7), rgba(0,0,0,0.7)), url(images.gif);
+    background-size: cover;
+    color: var(--text-color);
+}
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* === 2. Inputs & Buttons === */
+.loc-input {
+    border: 3px solid #269fe6;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 10px;
+    width: 270px;
+}
+
+.loc-input:invalid {
+    border: 3px solid #d24545;
+}
+
+.search-btn,
+.city-search-btn {
+    padding: 10px 14px;
+    background-color: #269fe6;
+    border: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    border-radius: 4px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.search-btn:hover,
+.city-search-btn:hover {
+    background-color: #1e80c0;
+}
+
+/* === 3. Air Quality Info === */
+.air-quality,
+.arr,
+.air-quality-status {
+    font-size: 4rem;
+    font-weight: 700;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.air-quality-status {
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* === 4. Component Info === */
+.component-names {
+    display: inline-block;
+}
+
+.component-container div {
+    margin: 10px 0;
+}
+
+.component-val {
+    font-size: 1.2rem;
+}
+
+/* === 5. Search History Buttons === */
+.search-history {
+    margin-top: 20px;
+}
+
+.history-buttons button {
+    margin: 5px;
+    padding: 6px 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.history-buttons button:hover {
+    background-color: #388e3c;
+}
+
+/* === 6. Loader Spinner === */
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* === 7. Toast Notification === */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 16px;
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* === 8. Dark Mode Toggle === */
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.theme-switch input {
+    margin-right: 5px;
+}
+
+/* === 9. Map === */
+#map {
+    height: 300px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* === 10. Mask Advisory === */
+.mask-advisory {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-left: 5px solid #ff9800;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* === 11. Responsive Design === */
+@media (max-width: 768px) {
+    .loc-input, .search-btn, .city-search-btn {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .air-quality, .air-quality-status, .arr {
+        font-size: 2.5rem;
+    }
+}
