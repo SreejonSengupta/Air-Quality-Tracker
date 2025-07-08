@@ -1,9 +1,9 @@
-// === 1. Constants ===
+
 const appId = "f30028e16e88f9c49da416055f9656e5";
 const apiurl = `https://api.openweathermap.org/data/2.5/weather?appid=${appId}&q=`;
 const link = "https://api.openweathermap.org/data/2.5/air_pollution";
 
-// === 2. DOM References ===
+
 const latInp = document.querySelector("#latitude");
 const lonInp = document.querySelector("#longitude");
 const airQuality = document.querySelector(".air-quality");
@@ -17,7 +17,7 @@ const citySearchBtn = document.querySelector(".city-search-btn");
 const historyContainer = document.querySelector(".history-buttons");
 
 
-// === Leaflet Map Setup ===
+
 let map, marker;
 
 function initMap(lat, lon) {
@@ -58,7 +58,7 @@ function hideLoader() {
 
 // === 3. Functions (Define BEFORE usage) ===
 
-// Fetch Air Quality by Coordinates
+
 const getairquality = async (lat, lon) => {
     try {
         showLoader();
@@ -80,7 +80,7 @@ const getairquality = async (lat, lon) => {
     }
 };
 
-// Set AQI index and color
+
 const setvaluesofair = airdata => {
     const aqi = airdata.list[0].main.aqi;
     let airstat = "", color = "";
@@ -195,7 +195,7 @@ function updateChart(components) {
     pollutantChart = new Chart(document.getElementById('pollutantChart'), config);
 }
 
-// === 4. Geolocation ===
+
 const getUserLocation = () => {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(onPositionGathered, onPositionGatherError);
@@ -223,7 +223,7 @@ toggle.addEventListener("change", () => {
 });
 
 
-// === 5. City Name Search ===
+
 async function checkweather(cityName) {
     try {
         showLoader();
@@ -247,7 +247,7 @@ async function checkweather(cityName) {
     }
 }
 
-// === 6. Search History ===
+
 function saveToHistory(city) {
     let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
 
@@ -272,7 +272,7 @@ function renderHistory() {
     });
 }
 
-// === 7. Event Listeners ===
+
 citySearchBtn.addEventListener("click", () => {
     checkweather(cityValue.value.trim());
 });
@@ -293,6 +293,6 @@ checkweather(cityName).then(() => {
     showToast("City data loaded!");
 });
 
-// === 8. Init App ===
+
 getUserLocation();
 renderHistory();
