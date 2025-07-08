@@ -5,7 +5,7 @@
     <title>Air Pollution Indicator</title>
     <link rel="stylesheet" href="style.css" class="css">
 
-    <!-- Leaflet CSS -->
+  
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
@@ -21,7 +21,7 @@
     <div class="root">
         <h1 class="heading">Air Pollution Indicator</h1>
 
-        <!-- City Search Section -->
+       
         <div class="enterlocation">
             <input type="text" placeholder="Enter a City Name" id="city1" class="loc-input">
             <button class="city-search-btn">Search</button>
@@ -33,7 +33,7 @@
             <div class="history-buttons"></div>
         </div>
 
-        <!-- Location Coordinates Section -->
+
         <div class="location-container">
             <h2 class="sub-heading">Your Location</h2>
             <label for="error-msg" style="color:red;"></label><br/>
@@ -52,15 +52,15 @@
                    id="longitude"
                    class="loc-input" />
 
-            <!-- ✅ Added this missing button -->
+           
             <button class="search-btn">Search by Coordinates</button>
         </div>
 
-        <!-- Leaflet Map -->
+      
         <h2 class="sub-heading">Map</h2>
         <div id="map" style="height: 300px; margin-bottom: 20px; border: 2px solid #ccc; border-radius: 10px;"></div>
 
-        <!-- Air Quality Display -->
+       
         <div class="air-info">
             <h2 class="sub-heading">Air Quality Index :</h2>
             <span class="air-quality">...</span>
@@ -105,7 +105,7 @@
 <canvas id="pollutantChart" width="400" height="200" style="margin-top: 20px;"></canvas>
 
 
-    <!-- Your Main Script -->
+   
     <script src="script.js" defer></script>
     <div id="toast" class="toast"></div>
     <div class="loader" id="loader"></div>
